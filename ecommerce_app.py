@@ -97,7 +97,8 @@ with tab_sales :
     # Calculate metrics
     total_profit = df_filtered['total_profit'].sum()
     total_sales = df_filtered['total_sales'].sum()
-    average_aov = df_filtered['total_sales'].sum() / df_filtered['order_id'].nunique()
+    average_aov = round((df_filtered['total_sales'].sum() / df_filtered['order_id'].nunique()), 2)
+    
 
 
 
@@ -237,7 +238,7 @@ with tab_products :
 
     # make metrics
     with col_quantity :
-        st.metric(label = 'Total Quantity Sold', value =  f'${total_quantity/1000:.2f}K')
+        st.metric(label = 'Total Quantity Sold', value =  f'{total_quantity/1000:.2f}K')
     with col_order :
         st.metric(label='Total Transactions', value = total_order)
     
