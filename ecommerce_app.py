@@ -18,8 +18,8 @@ st.set_page_config(
 # Function to load dataset
 @st.cache_data
 def load_data() :
-    df1 = pd.read_excel(r'C:\Users\dinda\Documents\Bootcamp\ecommerce_streamlit\dataset\processed_data_ecommerce.xlsx', sheet_name='processed_order')
-    df2 = pd.read_excel(r'C:\Users\dinda\Documents\Bootcamp\ecommerce_streamlit\dataset\processed_data_ecommerce.xlsx', sheet_name='customer_segmentation')
+    df1 = pd.read_excel('dataset/processed_data_ecommerce.xlsx', sheet_name='processed_order')
+    df2 = pd.read_excel('dataset/processed_data_ecommerce.xlsx', sheet_name='customer_segmentation')
     return df1, df2
 
 # load dataset
